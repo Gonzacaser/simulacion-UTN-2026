@@ -1,0 +1,14 @@
+# Ignore graphics/plots
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.svg
+*.eps
+
+# Ignore common plot directories
+/plots/
+/graficas/
+/graphs/
+/images/
