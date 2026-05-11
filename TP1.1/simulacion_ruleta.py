@@ -1,6 +1,8 @@
 """
 TP 1.1 - Simulacion de una ruleta europea.
 
+Version de Python utilizada: 3.12.
+
 Uso:
     python simulacion_ruleta.py -c 30 -n 1000 -e 17
 
@@ -9,26 +11,16 @@ Parametros principales:
     -n / --tiradas: cantidad de tiradas por corrida.
     -e / --elegido: numero elegido para analizar aciertos, entre 0 y 36.
 
-El programa genera 8 graficas en la carpeta indicada por --salida.
+El programa genera 9 graficas en la carpeta indicada por --salida.
 """
-
-from __future__ import annotations
 
 import argparse
 import math
 import random
-import sys
 from pathlib import Path
 from typing import List, Optional
 
-try:
-    import matplotlib.pyplot as plt
-except ModuleNotFoundError:
-    print(
-        "Falta instalar Matplotlib. Ejecuta: pip install matplotlib",
-        file=sys.stderr,
-    )
-    raise SystemExit(1)
+import matplotlib.pyplot as plt
 
 
 NUMEROS_RULETA = 37
